@@ -1,0 +1,65 @@
+[font]
+size = 11
+
+[font.normal]
+family = "JetBrainsMonoNL NFP"
+style = "Regular"
+
+[font.bold]
+family = "monospace"
+style = "Bold"
+
+[colors.primary]
+background = "#0C0C0C"      # noir doux
+foreground = "#d7d7d7"      # gris clair
+
+[colors.cursor]
+text = "#111213"
+cursor = "#d0d0d0"
+
+[colors.selection]
+text = "#111213"
+background = "#c8c8c8"
+
+# Palette monochrome très légère
+[colors.normal]
+black   = "#1a1b1c"
+red     = "#b80000"   
+green   = "#00b800"  
+yellow  = "#b8b800"
+blue    = "#5050b8"
+magenta = "#aa77cc"
+cyan    = "#00b8b8"
+white   = "#d7d7d7"
+
+[colors.bright]
+black   = "#2a2b2c"
+red     = "#ff0000"   
+green   = "#00ff00"  
+yellow  = "#ffff00"
+blue    = "#5050ff"
+magenta = "#ff00ff"
+cyan    = "#00ffff"
+white   = "#d7d7d7"
+
+[cursor]
+blink_interval = 250
+unfocused_hollow = true
+
+[cursor.style]
+blinking = "Always"
+shape = "Block"
+
+[selection]
+save_to_clipboard = true
+
+[window]
+decorations = "full"
+dynamic_title = true
+
+[window.padding]
+x = 8
+y = 0
+
+[general]
+live_config_reload = true
