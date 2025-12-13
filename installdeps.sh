@@ -1,5 +1,4 @@
-
- "🔄 Mise à jour du système..."
+echo "🔄 Mise à jour du système..."
 sudo pacman -Syu --noconfirm
 
 echo "📦 Installation des paquets..."
@@ -12,6 +11,10 @@ sudo pacman -S --needed --noconfirm \
     curl \
     nodejs \
     npm \
+    go \
+    rust \
+    python \
+    python-pip \
     xorg-xkbcomp \
     xorg-xkbutils \
     xkeyboard-config
@@ -32,4 +35,7 @@ sudo pacman -Sc --noconfirm
 
 echo "✅ Installation terminée !"
 echo "➡️ Déconnecte-toi puis reconnecte-toi pour utiliser Zsh."
-echo "🟢 Node version : $(node -v 2>/dev/null || echo 'non disponible (relogin requis)')"
+echo "🟢 Node version : $(node -v 2>/dev/null || echo 'non disponible')"
+echo "🟢 Go version   : $(go version 2>/dev/null || echo 'non disponible')"
+echo "🟢 Rust version : $(rustc --version 2>/dev/null || echo 'non disponible')"
+echo "🟢 Python       : $(python --version 2>/dev/null || echo 'non disponible')"
