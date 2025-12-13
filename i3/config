@@ -607,9 +607,11 @@ bindsym $mod+t exec --no-startup-id rofi -show window \
 
 
 # demarrage
-exec --no-startup-id xset r rate 200 30 
 exec --no-startup-id sunshine 
-exec --no-startup-id numlockx on 
 # exec --no-startup-id picom
+
+# demarrage + reload de la conf
+exec_always --no-startup-id numlockx on 
+exec_always --no-startup-id xset r rate 200 30
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 

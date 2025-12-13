@@ -17,6 +17,10 @@ sudo pacman -S --needed --noconfirm \
     python-pip \
     xorg-xkbcomp \
     xorg-xkbutils \
+	xorg-xset \
+    xorg-setxkbmap \
+    numlockx \
+	xclip \
     xkeyboard-config
 
 echo "🐚 Définition de Zsh comme shell par défaut..."
