@@ -54,7 +54,7 @@ shape = "Block"
 save_to_clipboard = true
 
 [window]
-opacity=0.95
+# opacity=0.90
 decorations = "full"
 dynamic_title = true
 
