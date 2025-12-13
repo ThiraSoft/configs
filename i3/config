@@ -314,11 +314,11 @@ bindsym $mod+Shift+p exec --no-startup-id ~/.config/i3/scripts/power-profiles
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:"
-set $ws2 "2:"
-set $ws3 "3:"
-set $ws4 "4:"
-set $ws5 "5:"
+set $ws1 "1: "
+set $ws2 "2: "
+set $ws3 "3: "
+set $ws4 "4: "
+set $ws5 "5: "
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -476,7 +476,7 @@ exec --no-startup-id /usr/bin/dunst
 #exec --no-startup-id sleep 2 && xfce4-terminal
 # exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
 #exec --no-startup-id sleep 3 && thunar
-exec --no-startup-id sleep 2 && alacritty
+exec --no-startup-id sleep 1 && alacritty
 
 
 ## system tray
@@ -502,22 +502,22 @@ set $darkbluetrans  #08052be6
 set $darkblue       #08052b
 set $lightblue      #5294e2
 set $urgentred      #e53935
+set $darkviridian	#003040
 set $viridian		#00B0A0
 set $white          #ffffff
 set $black          #000000
 set $purple         #e345ff
 set $darkpurple		#7f3fbf
-# set $darkgrey       #383c4a
 set $darkgrey       #0c0c0c
-set $midgrey       #003040
+set $midgrey       #383c4a
 set $grey           #b0b5bd
 set $mediumgrey     #8b8b8b
 set $yellowbrown    #e1b700
 
 # define colors for windows:
 #class                      border      bground     text        indicator		child_border
-client.focused              $lightblue  $darkblue   $white      $viridian		$viridian
-client.unfocused            $darkblue   $darkblue   $grey       $darkgrey		$midgrey
+client.focused              $darkgrey	$darkgrey   $white      $viridian		$viridian
+client.unfocused            $darkgrey   $darkgrey   $midgrey    $darkgrey		$darkviridian
 client.focused_inactive     $darkblue   $darkblue   $grey       $black			$black
 client.urgent               $urgentred  $urgentred  $white      $yellowbrown    $yellowbrown
 
@@ -530,12 +530,13 @@ client.urgent               $urgentred  $urgentred  $white      $yellowbrown    
 bar {
         font pango: Noto Sans Regular 10
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
-            position top
+		position top
 #           i3bar_command i3bar --transparency
 # it could be that you have no primary display set: set one (xrandr --output <output> --primary)
 # reference: https://i3wm.org/docs/userguide.html#_tray_output
-            #tray_output primary
-            tray_padding 0
+
+		#tray_output primary
+		tray_padding 0
 
 # When strip_workspace_numbers is set to yes,
 # any workspace that has a name of the form
@@ -543,12 +544,12 @@ bar {
 strip_workspace_numbers yes
 ##strip_workspace_name no
 
-            colors {
-            separator          $purple
-            background         $darkgrey
-            statusline         $grey
+	colors {
+		separator          $purple
+		background         $darkgrey
+		statusline         $grey
 #                           border              bg          txt         indicator
-        focused_workspace   $grey			$grey	$darkgrey   $purple
+        focused_workspace   $grey				$grey		$darkgrey   $purple
         active_workspace    $lightblue          $viridian	$viridian   $purple
         inactive_workspace  $darkgrey           $darkgrey   $grey		$purple
         urgent_workspace    $urgentred          $urgentred  $white      $purple

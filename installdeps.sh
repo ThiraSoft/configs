@@ -23,6 +23,20 @@ sudo pacman -S --needed --noconfirm \
 	xclip \
     xkeyboard-config
 
+
+# Installer Iosevka Nerd Font
+FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Iosevka.zip"
+FONT_DIR="/usr/local/share/fonts/IosevkaNerdFont"
+TEMP_DIR=$(mktemp -d)
+
+echo "Installation de Iosevka Nerd Font..."
+wget --quiet --show-progress -O "$TEMP_DIR/Iosevka.zip" "$FONT_URL"
+sudo mkdir -p "$FONT_DIR"
+sudo unzip -q "$TEMP_DIR/Iosevka.zip" -d "$FONT_DIR"
+rm -rf "$TEMP_DIR"
+sudo fc-cache -fv
+echo "Installation de Iosevka Nerd Font terminée."
+
 echo "🐚 Définition de Zsh comme shell par défaut..."
 chsh -s "$(which zsh)"
 

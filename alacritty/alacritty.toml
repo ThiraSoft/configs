@@ -1,12 +1,13 @@
 [font]
 size = 8
+offset = {x=0,y=2}
 
 [font.normal]
-family = "ZedMono Nerd Font"
+family = "Iosevka Nerd Font"
 style = "Regular"
 
 [font.bold]
-family = "monospace"
+family = "Iosevka Nerd Font"
 style = "Bold"
 
 [colors.primary]
@@ -43,7 +44,7 @@ cyan    = "#00ffff"
 white   = "#d7d7d7"
 
 [cursor]
-blink_interval = 250
+blink_interval = 200
 unfocused_hollow = true
 
 [cursor.style]
