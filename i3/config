@@ -73,9 +73,13 @@ bindsym $mod+Shift+Tab workspace prev
 
 # switch to workspace
 bindcode $mod+10    workspace  $ws1
+bindsym  $mod+u		workspace  $ws1
 bindcode $mod+11    workspace  $ws2
+bindsym  $mod+i		workspace  $ws2
 bindcode $mod+12    workspace  $ws3
+bindsym  $mod+o		workspace  $ws3
 bindcode $mod+13    workspace  $ws4
+bindsym  $mod+p		workspace  $ws4
 bindcode $mod+14    workspace  $ws5
 bindcode $mod+15    workspace  $ws6
 bindcode $mod+16    workspace  $ws7
@@ -298,7 +302,7 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # toggle between audio devices for output
-bindsym $mod+p exec --no-startup-id ~/.config/i3/scripts/audio-device-switch
+# bindsym $mod+p exec --no-startup-id ~/.config/i3/scripts/audio-device-switch
 
 ## App shortcuts
 bindsym $mod+w exec --no-startup-id /usr/bin/firefox
@@ -508,17 +512,21 @@ set $white          #ffffff
 set $black          #000000
 set $purple         #e345ff
 set $darkpurple		#7f3fbf
-set $darkgrey       #0c0c0c
-set $midgrey       #383c4a
+set $darkergrey       #0c0c0c
+set $darkgrey       #2c2c2c
+set $midgrey		#606060
+set $mediumgrey     #8b8b9b
 set $grey           #b0b5bd
-set $mediumgrey     #8b8b8b
 set $yellowbrown    #e1b700
+set $red			#B00000
+set $darkred		#600000
+set $rouille		#E06060
 
 # define colors for windows:
 #class                      border      bground     text        indicator		child_border
-client.focused              $darkgrey	$darkgrey   $white      $viridian		$viridian
-client.unfocused            $darkgrey   $darkgrey   $midgrey    $darkgrey		$darkviridian
-client.focused_inactive     $darkblue   $darkblue   $grey       $black			$black
+client.focused              $darkgrey	$darkergrey   $grey		$darkviridian		$darkviridian
+client.unfocused            $darkergrey $darkergrey   $midgrey    $darkergrey		$black
+client.focused_inactive     $darkergrey $darkergrey   $grey       $black			$black
 client.urgent               $urgentred  $urgentred  $white      $yellowbrown    $yellowbrown
 
 ############################################
@@ -546,13 +554,14 @@ strip_workspace_numbers yes
 
 	colors {
 		separator          $purple
-		background         $darkgrey
+		background         $darkergrey
 		statusline         $grey
-#                           border              bg          txt         indicator
-        focused_workspace   $grey				$grey		$darkgrey   $purple
-        active_workspace    $lightblue          $viridian	$viridian   $purple
-        inactive_workspace  $darkgrey           $darkgrey   $grey		$purple
-        urgent_workspace    $urgentred          $urgentred  $white      $purple
+
+#                           border			bg          txt         indicator
+        focused_workspace   $darkviridian	$darkergrey $white		$purple
+        active_workspace    $lightblue		$viridian	$viridian   $purple
+        inactive_workspace  $darkergrey		$darkergrey $midgrey	$purple
+        urgent_workspace    $urgentred		$urgentred  $white      $purple
     }
 }
 
