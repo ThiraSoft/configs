@@ -113,9 +113,13 @@ bindcode $mod+Mod2+90 workspace $ws10
 
 # move focused container to workspace
 bindcode $mod+Shift+10    move container to workspace  $ws1
+bindsym $mod+Shift+u    move container to workspace  $ws1
 bindcode $mod+Shift+11    move container to workspace  $ws2
+bindsym $mod+Shift+i    move container to workspace  $ws2
 bindcode $mod+Shift+12    move container to workspace  $ws3
+bindsym $mod+Shift+o    move container to workspace  $ws3
 bindcode $mod+Shift+13    move container to workspace  $ws4
+bindsym $mod+Shift+p    move container to workspace  $ws4
 bindcode $mod+Shift+14    move container to workspace  $ws5
 bindcode $mod+Shift+15    move container to workspace  $ws6
 bindcode $mod+Shift+16    move container to workspace  $ws7
@@ -310,7 +314,7 @@ bindsym $mod+n exec --no-startup-id /usr/bin/thunar
 bindsym Print exec --no-startup-id scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
 
 # Power Profiles menu switcher (rofi)
-bindsym $mod+Shift+p exec --no-startup-id ~/.config/i3/scripts/power-profiles
+# bindsym $mod+Shift+p exec --no-startup-id ~/.config/i3/scripts/power-profiles
 
 ##########################################
 # configuration for workspace behaviour: #
