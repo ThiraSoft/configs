@@ -1,0 +1,21 @@
+ @theme "~/.local/share/rofi/themes/arc_dark_transparent_colors.rasi"
+* {
+    background: #0e0e0e;
+    foreground: #cdd6f4;
+	// separatorcolor: #cdd6f4;
+}
+window {
+    font:			"Noto Sans Regular 20";
+	border-radius:	1%;
+    background:		#0e0e0e;
+	border-color:	#202030;
+    padding:		1%;
+    width:			20%;
+    location:		center;
+	border:			2px;
+    transparency:     "real";
+}
+
+listview {
+    scrollbar: false;
+}

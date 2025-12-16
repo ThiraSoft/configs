@@ -3,7 +3,9 @@
 rm -rf ../alacritty 
 rm -rf ../i3 
 rm -rf ../picom
+rm -rf ../rofi
 
 cp -r alacritty ..
 cp -r i3 ..
 cp -r picom ..
+cp -r rofi ..

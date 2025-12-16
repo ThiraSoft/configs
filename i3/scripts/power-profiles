@@ -22,10 +22,10 @@ current_profile="$(powerprofilesctl get 2>/dev/null)"
 ROFI_ARGS=(-dmenu -i -theme "$ROFI_THEME" -p "Change Profile" -mesg "<b>Current used:</b> $current_profile" -markup-rows)
 
 # Menu entries
-cancel="  Cancel"
-perf="  Performance"
-balanced="  Balanced"
-powersave="  Power Saver"
+cancel="    Cancel"
+perf="    Performance"
+balanced="    Balanced"
+powersave="    Power Saver"
 # sets chancel to be on top
 options="$cancel"
 
