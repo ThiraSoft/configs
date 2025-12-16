@@ -180,8 +180,10 @@ bindsym $mod+r mode "resize"
 # keybindings for different actions: #
 ######################################
 
-# start a terminal
+# custom
 bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+shift+m exec --no-startup-id firefox --new-window https://music.apple.com/fr
+bindsym $mod+shift+n exec --no-startup-id firefox --private-window
 
 # kill focused window
 bindsym $mod+q kill
@@ -275,7 +277,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+a focus parent
 
 # open new empty workspace
-bindsym $mod+Shift+n exec --no-startup-id ~/.config/i3/scripts/empty_workspace
+# bindsym $mod+Shift+n exec --no-startup-id ~/.config/i3/scripts/empty_workspace
 
 # Multimedia Keys
 
@@ -345,7 +347,7 @@ set $ws10 "10"
 # bind program to workspace and focus to them on startup:
 assign [class="Xfce4-terminal"] $ws1
 assign [class="alacritty"] $ws1
-assign [class="(?i)firefox"] $ws2
+assign [class="firefox"] $ws2
 assign [class="Thunar"] $ws3
 assign [class="thunderbird"] $ws4
 assign [class="TelegramDesktop"] $ws5
