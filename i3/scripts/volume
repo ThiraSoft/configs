@@ -27,10 +27,10 @@ MUTED=$(pactl list sinks | awk -v s="$SINK" '
 ')
 
 # Choose symbol
-AUDIO_HIGH=''
-AUDIO_MED=''
-AUDIO_LOW=''
-AUDIO_MUTED=''
+AUDIO_HIGH='  '
+AUDIO_MED='  '
+AUDIO_LOW='  '
+AUDIO_MUTED='  '
 MED_THRESH=50
 LOW_THRESH=0
 

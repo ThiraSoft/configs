@@ -19,9 +19,9 @@ configuration {
 /* Insert theme modifications after this */
 
 window {
-    background-color: @background;
-    border:           0;
-    padding:          30;
+    // background-color: @background;
+    // border:           0;
+    // padding:          30;
 }
 listview {
     lines:   10;

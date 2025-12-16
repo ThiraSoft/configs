@@ -6,7 +6,7 @@
 }
 window {
     font:			"Noto Sans Regular 20";
-	border-radius:	1%;
+	border-radius:	0px;
     background:		#0e0e0e;
 	border-color:	#202030;
     padding:		1%;

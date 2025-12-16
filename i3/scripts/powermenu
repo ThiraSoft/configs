@@ -37,20 +37,19 @@ find_lock_script() {
 }
 
 # Menu entries
-chancel="   Cancel"
-lock="   Lock"
-logout="   Logout"
-reboot="   Reboot"
 shutdown="   Shutdown"
+reboot="   Reboot"
+logout="   Logout"
 suspend="   Suspend"
 hibernate="   Hibernate"
+lock="   Lock"
 
 
 # Add lock only if script is found
 if lockcmd="$(find_lock_script)"; then
-    options="$chancel\n$lock\n$logout\n$reboot\n$shutdown\n$suspend\n$hibernate"
+    options="$shutdown\n$reboot\n$logout\n$suspend\n$hibernate\n$lock"
 else
-    options="$chancel\n$logout\n$reboot\n$shutdown\n$suspend\n$hibernate"
+    options="$shutdown\n$reboot\n$logout\n$suspend\n$hibernate"
 fi
 
 chosen="$(echo -e "$options" | rofi -dmenu -i -p "Power Menu" \
