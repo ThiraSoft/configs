@@ -513,7 +513,7 @@ set $urgentred      #e53935
 set $darkviridian	#003040
 set $viridian		#00B0A0
 set $white          #ffffff
-set $black          #000000
+set $transparent          #00000000
 set $purple         #e345ff
 set $darkpurple		#7f3fbf
 set $darkergrey       #0c0c0c
@@ -528,9 +528,9 @@ set $rouille		#E06060
 
 # define colors for windows:
 #class                      border      bground     text        indicator		child_border
-client.focused              $darkgrey	$darkergrey   $grey		$darkviridian		$darkviridian
-client.unfocused            $darkergrey $darkergrey   $midgrey    $darkergrey		$black
-client.focused_inactive     $darkergrey $darkergrey   $grey       $black			$black
+client.focused              $darkgrey	$darkergrey $grey		$darkviridian	$darkviridian
+client.unfocused            $darkergrey $darkergrey $midgrey	$transparent	$transparent
+client.focused_inactive     $darkergrey $darkergrey $grey		$transparent	$transparent
 client.urgent               $urgentred  $urgentred  $white      $yellowbrown    $yellowbrown
 
 ############################################
